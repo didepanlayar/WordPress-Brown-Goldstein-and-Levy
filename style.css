@@ -98,3 +98,27 @@ input[type='submit'] {
 .text-center {
     text-align: center;
 }
+
+img {
+    max-width: 100%;
+}
+
+/*
+===============================
+            Header             
+===============================
+*/
+
+.logo-wrapper {
+    width: 153px;
+}
+
+.logo-link {
+    display: block;
+}
+
+.logo-link img {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+}
