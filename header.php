@@ -11,12 +11,26 @@
 <body <?php body_class(); ?>>
     <header class="site-header">
         <div class="container">
-            <div class="d-flex">
+            <div class="d-flex space-between item-center">
                 <div class="logo-wrapper">
                     <?php $header_logo = get_field('header_logo', 'option'); ?>
                     <a href="<?php esc_url(home_url()); ?>" class="logo-link">
                         <img src="<?php echo $header_logo['url']; ?>" alt="<?php echo $header_logo['title']; ?>">
                     </a>
+                </div>
+                <div class="nav-wrapper">
+                    <button class="nav-trigger">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/Menu.svg' ?>" alt="Menu Trigger">
+                    </button>
+                    <?php
+                        wp_nav_menu([
+                            'theme_location'    => 'header-menu',
+                            'container'         => 'nav',
+                            'container_class'   => 'header-nav-menu',
+                            'menu_class'        => 'header-navigation d-flex',
+                            'depth'             => 1
+                        ]);
+                    ?>
                 </div>
             </div>
         </div>
