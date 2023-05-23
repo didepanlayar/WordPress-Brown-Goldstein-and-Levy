@@ -151,3 +151,7 @@ img {
     font-size: 14px;
     line-height: 22px;
 }
+
+.header-navigation a:hover {
+    color: #565656;
+}
