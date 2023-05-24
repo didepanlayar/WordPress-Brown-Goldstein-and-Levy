@@ -18,7 +18,7 @@
                         <img src="<?php echo $header_logo['url']; ?>" alt="<?php echo $header_logo['title']; ?>">
                     </a>
                 </div>
-                <div class="nav-wrapper">
+                <div class="nav-wrapper d-flex">
                     <button class="nav-trigger">
                         <img src="<?php echo get_template_directory_uri() . '/assets/images/Menu.svg' ?>" alt="Menu Trigger">
                     </button>
@@ -31,6 +31,11 @@
                             'depth'             => 1
                         ]);
                     ?>
+                    <div class="search-wrapper">
+                        <button class="search-trigger">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/images/Search.svg' ?>" alt="Search Trigger">
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

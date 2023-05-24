@@ -125,6 +125,10 @@ img {
     object-fit: contain;
 }
 
+.nav-wrapper {
+    column-gap: 25px;
+}
+
 .nav-trigger {
     display: none;
 }
@@ -154,4 +158,8 @@ img {
 
 .header-navigation a:hover {
     color: #565656;
+}
+
+.search-trigger {
+    cursor: pointer;
 }
