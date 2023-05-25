@@ -144,6 +144,16 @@ img {
     transform: translateX(10px);
 }
 
+.btn-outline-light {
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+}
+
+.btn-outline-light:hover {
+    color: #FCB611;
+    border-color: #FCB611;
+}
+
 /*
 ===============================
             Header             
@@ -263,4 +273,48 @@ img {
     font-weight: 600;
     margin-bottom: 30px;
     line-height: 28px;
+}
+
+.swiper {
+    width: 100%;
+    height: 537px;
+}
+
+.swiper-slide {
+    font-size: 18px;
+    background: #FFFFFF;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.featured-cases {
+    margin-bottom: 100px;
+}
+
+.featured-cases__slider_slide {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.featured-cases__slide_content {
+    width: 50%;
+    background-color: #56135A;
+    padding: 50px;
+    padding-right: 20px;
+}
+
+.slide__span {
+    color: #FCB611;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.slide__title {
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
 }
