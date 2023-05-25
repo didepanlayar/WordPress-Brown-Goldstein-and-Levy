@@ -7,4 +7,5 @@ function get_enqueue() {
     wp_enqueue_style('stylesheet', get_stylesheet_uri(), [], false);
     // Scripts
     wp_enqueue_script('swiper', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', [], '9.3.2', true);
+    wp_enqueue_script('app', get_template_directory_uri() . '/assets/js/app.js', [], false, true);
 }
