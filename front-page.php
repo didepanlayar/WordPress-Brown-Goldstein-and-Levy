@@ -44,7 +44,7 @@
                             $title  = get_sub_field('title');
                             $button = get_sub_field('button');
                 ?>
-                            <div class="swiper-slid featured-cases__slider_slide" style="background-image: url(<?php echo $image['url']; ?>)">
+                            <div class="swiper-slide featured-cases__slider_slide" style="background-image: url(<?php echo $image['url']; ?>)">
                                 <div class="featured-cases__slide_content">
                                     <h5 class="slide__span"><?php echo $span; ?></h5>
                                     <h2 class="slide__title"><?php echo $title; ?></h2>
