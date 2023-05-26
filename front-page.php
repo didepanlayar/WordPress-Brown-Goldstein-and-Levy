@@ -45,16 +45,18 @@
                             $button = get_sub_field('button');
                 ?>
                             <div class="swiper-slide featured-cases__slider_slide" style="background-image: url(<?php echo $image['url']; ?>)">
-                                <div class="featured-cases__slide_content">
-                                    <h5 class="slide__span"><?php echo $span; ?></h5>
-                                    <h2 class="slide__title"><?php echo $title; ?></h2>
-                                    <?php
-                                        if($button){
-                                    ?>
-                                            <a href="<?php echo $button['url']; ?>" class="btn btn-outline-light btn-has-icon d-i-flex item-center justify-center" target="<?php echo $history_button['target']; ?>"><?php echo $button['title']; ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/Right-Arrow-Light.svg' ?>" alt="Right Arrow Light"></a>
-                                    <?php
-                                        }
-                                    ?>
+                                <div class="featured-cases__slide_content d-flex item-center">
+                                    <div class="slide-content__content">
+                                        <h5 class="slide__span"><?php echo $span; ?></h5>
+                                        <h2 class="slide__title"><?php echo $title; ?></h2>
+                                        <?php
+                                            if($button){
+                                        ?>
+                                                <a href="<?php echo $button['url']; ?>" class="btn btn-outline-light btn-has-icon d-i-flex item-center justify-center slide__button" target="<?php echo $history_button['target']; ?>"><?php echo $button['title']; ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/Right-Arrow-Light.svg' ?>" alt="Right Arrow Light"></a>
+                                        <?php
+                                            }
+                                        ?>
+                                    </div>
                                 </div>
                             </div>
                 <?php

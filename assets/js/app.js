@@ -5,6 +5,7 @@ window.onload = function() {
                 delay: 8000,
                 disableOnInteraction: false,
             },
+            loop: true,
             pagination: {
                 el: ".featured-cases__slider_pagination",
                 clickable: true,

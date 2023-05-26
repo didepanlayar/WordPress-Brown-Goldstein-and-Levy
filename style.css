@@ -154,6 +154,10 @@ img {
     border-color: #FCB611;
 }
 
+.btn-outline-light:hover img {
+    filter: invert(68%) sepia(73%) saturate(587%) hue-rotate(350deg) brightness(101%) contrast(98%);
+}
+
 /*
 ===============================
             Header             
@@ -300,9 +304,13 @@ img {
 
 .featured-cases__slide_content {
     width: 50%;
-    background-color: #56135A;
+    background-color: rgba(86, 19, 90, 0.8);
     padding: 50px;
-    padding-right: 20px;
+}
+
+.slide-content__content {
+    width: 350px;
+    max-width: 100%;
 }
 
 .slide__span {
@@ -310,11 +318,55 @@ img {
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .slide__title {
     font-size: 24px;
-    line-height: 32px;
+    line-height: 36px;
     color: #FFFFFF;
+}
+
+.slide__button {
+    margin-top: 50px;
+}
+
+.featured-cases__slider_next, .swiper-rtl .featured-cases__slider_prev {
+    right: 50px;
+}
+
+.featured-cases__slider_prev, .swiper-rtl .featured-cases__slider_next {
+    left: 50px;
+}
+
+.featured-cases__slider_next::after, .featured-cases__slider_prev::after {
+    font-size: 20px;
+    color: #A3A3A3;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 25px 10px;
+}
+
+.featured-cases__slider_next.swiper-button-disabled, .featured-cases__slider_prev.swiper-button-disabled {
+    display: none;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    width: auto;
+    display: inline-block;
+    bottom: 50px;
+    left: 55%;
+    transform: translateX(-55%);
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    width: 14px;
+    height: 14px;
+    opacity: 0.75;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #FCB611;
+    border-color: #FCB611;
 }
