@@ -121,5 +121,30 @@
             </div>
         </div>
     </section>
+    <!-- Recent Awards -->
+    <section class="recent-awards">
+        <div class="container">
+            <h2 class="recent-awards__title text-center"><?php the_field('award_title'); ?></h2>
+            <div class="swiper recent-awards__slider">
+                <div class="swiper-wrapper d-flex item-center">
+                    <?php
+                        if(have_rows('awards')) {
+                            while(have_rows('awards')) {
+                                the_row();
+                                $award_image = get_sub_field('award_image');
+                    ?>
+                                <div class="swiper-slide recent-awards__slide d-flex item-center justify-center">
+                                    <img src="<?php echo $award_image['url']; ?>" alt="<?php echo $award_image['title']; ?>">
+                                </div>
+                    <?php
+                            }
+                        }
+                    ?>
+                </div>
+                <div class="swiper-button-next recent-awards__slider-next"></div>
+                <div class="swiper-button-prev recent-awards__slider-prev"></div>
+            </div>
+        </div>
+    </section>
 </main>
 <?php get_footer(); ?>
