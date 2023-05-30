@@ -74,53 +74,57 @@
         $news_status = get_field('news_status');
         $news_title  = get_field('news_title') ;
         $news_button = get_field('news_button');
+        if($news_status) {
     ?>
-    <section class="recent-news">
-        <div class="container">
-            <div class="recent-news__content">
-                <h2 class="recent-news__title text-center"><?php echo $news_title; ?></h2>
-                <div class="recent-news__entries d-flex space-between">
-                    <?php
-                        $recent_news = new WP_Query([
-                            'post_type'      => 'news',
-                            'posts_per_page' => 2,
-                            'order'          => 'DESC',
-                            'orderby'        => 'date'
-                        ]);
-                        if($recent_news->have_posts()) {
-                            while($recent_news->have_posts()) {
-                                $recent_news->the_post();
-                    ?>
-                                <div class="recent-news__entry">
-                                    <div class="news-entry__image-wrapper">
-                                        <a href="<?php the_permalink(); ?>">
-                                            <?php the_post_thumbnail(); ?>
-                                        </a>
-                                    </div>
-                                    <div class="news-entry__meta d-flex justify-center">
-                                        <span class="tags"><?php the_tags(); ?></span>
-                                        <span class="date"><?php echo get_the_date(); ?></span>
-                                    </div>
-                                    <h3 class="news-entry__title text-center"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                                </div>
-                    <?php
-                            }
-                            wp_reset_postdata();
-                        }
-                    ?>
-                </div>
-                <?php
-                    if($news_button) {
-                ?>
-                        <div class="recent-news__button-wrapper text-center">
-                            <a href="<?php echo $news_button['url']; ?>" class="btn btn-outline-grey btn-has-icon d-i-flex item-center justify-center" target="<?php echo $news_button['target']; ?>"><?php echo $news_button['title']; ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/Right-Arrow-Primary.svg' ?>" alt="Right Arrow Primary"></a>
+            <section class="recent-news">
+                <div class="container">
+                    <div class="recent-news__content">
+                        <h2 class="recent-news__title text-center"><?php echo $news_title; ?></h2>
+                        <div class="recent-news__entries d-flex space-between">
+                            <?php
+                                $recent_news = new WP_Query([
+                                    'post_type'      => 'news',
+                                    'posts_per_page' => 2,
+                                    'order'          => 'DESC',
+                                    'orderby'        => 'date'
+                                ]);
+                                if($recent_news->have_posts()) {
+                                    while($recent_news->have_posts()) {
+                                        $recent_news->the_post();
+                            ?>
+                                        <div class="recent-news__entry">
+                                            <div class="news-entry__image-wrapper">
+                                                <a href="<?php the_permalink(); ?>">
+                                                    <?php the_post_thumbnail(); ?>
+                                                </a>
+                                            </div>
+                                            <div class="news-entry__meta d-flex justify-center">
+                                                <span class="tags"><?php the_tags(); ?></span>
+                                                <span class="date"><?php echo get_the_date(); ?></span>
+                                            </div>
+                                            <h3 class="news-entry__title text-center"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                        </div>
+                            <?php
+                                    }
+                                    wp_reset_postdata();
+                                }
+                            ?>
                         </div>
-                <?php
-                    }
-                ?>
-            </div>
-        </div>
-    </section>
+                        <?php
+                            if($news_button) {
+                        ?>
+                                <div class="recent-news__button-wrapper text-center">
+                                    <a href="<?php echo $news_button['url']; ?>" class="btn btn-outline-grey btn-has-icon d-i-flex item-center justify-center" target="<?php echo $news_button['target']; ?>"><?php echo $news_button['title']; ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/Right-Arrow-Primary.svg' ?>" alt="Right Arrow Primary"></a>
+                                </div>
+                        <?php
+                            }
+                        ?>
+                    </div>
+                </div>
+            </section>
+    <?php
+        }
+    ?>
     <!-- Recent Awards -->
     <section class="recent-awards">
         <div class="container">

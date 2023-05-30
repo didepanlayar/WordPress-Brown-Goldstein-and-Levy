@@ -289,10 +289,6 @@ img {
     display: flex;
 }
 
-.featured-cases {
-    margin-bottom: 100px;
-}
-
 .featured-cases__slider {
     height: 537px;
 }
@@ -374,7 +370,7 @@ img {
 }
 
 .recent-news {
-    margin-bottom: 100px;
+    margin: 100px 0;
 }
 
 .recent-news__title {
