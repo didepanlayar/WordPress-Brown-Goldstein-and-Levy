@@ -14,7 +14,7 @@
             <div class="d-flex space-between item-center">
                 <div class="logo-wrapper">
                     <?php $header_logo = get_field('header_logo', 'option'); ?>
-                    <a href="<?php esc_url(home_url()); ?>" class="logo-link">
+                    <a href="<?php echo home_url(); ?>" class="logo-link">
                         <img src="<?php echo $header_logo['url']; ?>" alt="<?php echo $header_logo['title']; ?>">
                     </a>
                 </div>
