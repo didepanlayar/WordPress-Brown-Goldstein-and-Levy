@@ -673,7 +673,7 @@ img {
     margin-left: auto;
 }
 
-.mission-title {
+.section-title {
     color: #282828;
     font-size: 26px;
     line-height: 34px;
@@ -684,7 +684,7 @@ img {
     align-items: center;
 }
 
-.mission-title-sep span {
+.section-title-sep span {
     display: inline-block;
     margin-bottom: 10px;
     border-bottom: 3px solid #FCB611;
@@ -699,4 +699,52 @@ img {
     color: #56135A;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+}
+
+.history {
+    margin: 100px 0;
+}
+
+.history__content-wrapper {
+    column-gap: 60px;
+}
+
+.history__content-description {
+    flex: 2;
+    margin-bottom: 30px;
+}
+
+.history__content-description p {
+    line-height: 32px;
+    color: #333333;
+}
+
+.history__content-blockquote {
+    flex: 1;
+}
+
+.history__content-blockquote blockquote {
+    margin: 0;
+    padding: 40px;
+    padding-top: 60px;
+    background-color: #56135A;
+    font-size: 20px;
+    line-height: 36px;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    position: relative;
+}
+
+.history__content-blockquote blockquote::before {
+    content: "";
+    background-image: url(assets/images/Blockquote.svg);
+    width: 100px;
+    height: 100px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: -30px;
+    left: 0px;
 }
