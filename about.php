@@ -56,5 +56,19 @@
             </div>
         </div>
     </section>
+    <!-- Content -->
+    <?php
+        $content_background  = get_field('content_background');
+        $content_title       = get_field('content_title');
+        $content_description = get_field('content_description');
+    ?>
+    <section class="about-content" style="background-image: url(<?php echo $content_background['url']; ?>">
+        <div class="container">
+            <div class="about-content__content">
+                <h2 class="section-title section-title-sep-primary"><?php echo $content_title; ?><span></span></h2>
+                <div class="about-content-description"><?php echo $content_description; ?></div>
+            </div>
+        </div>
+    </section>
 </main>
 <?php get_footer(); ?>
