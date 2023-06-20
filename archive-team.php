@@ -12,5 +12,35 @@
             </div>
         </div>
     </section>
+    <!-- Team Member -->
+    <section class="team">
+        <div class="container">
+            <div class="team__content">
+                <?php
+                    $team_query = new WP_Query([
+                        'post_type'     => 'team',
+                        'posts_per_page' => -1,
+                        'order'         => 'DESC',
+                        'order'         => 'date'
+                    ]);
+                    if($team_query->have_posts()) {
+                        while($team_query->have_posts()) {
+                            $team_query->the_post();
+                ?>
+                            <div class="team-member">
+                                <div class="team-member-image">
+                                    <?php the_post_thumbnail(); ?>
+                                </div>
+                                <h3 class="team-member-name">
+                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                </h3>
+                            </div>
+                <?php
+                        }
+                    }
+                ?>
+            </div>
+        </div>
+    </section>
 </main>
 <?php get_footer(); ?>
