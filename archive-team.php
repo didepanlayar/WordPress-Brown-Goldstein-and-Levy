@@ -15,7 +15,7 @@
     <!-- Team Member -->
     <section class="team">
         <div class="container">
-            <div class="team__content">
+            <div class="team__content d-flex justify-center flex-wrap">
                 <?php
                     $team_query = new WP_Query([
                         'post_type'     => 'team',
@@ -31,8 +31,9 @@
                                 <div class="team-member-image">
                                     <?php the_post_thumbnail(); ?>
                                 </div>
-                                <h3 class="team-member-name">
+                                <h3 class="team-member-name text-center">
                                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                    <div class="team-member-name-sep"></div>
                                 </h3>
                             </div>
                 <?php
