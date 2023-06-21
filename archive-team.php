@@ -39,7 +39,37 @@
                 <?php
                         }
                     }
+                    wp_reset_postdata();
                 ?>
+            </div>
+        </div>
+    </section>
+    <!-- Fellowship -->
+    <?php
+        $fellowship_title       = get_field('fellowship_title', 'option');
+        $fellowship_description = get_field('fellowship_description', 'option');
+        $fellowship_button      = get_field('fellowship_button', 'option');
+        $fellowship_subtitle    = get_field('fellowship_subtitle', 'option');
+        $fellowship_name        = get_field('fellowship_name', 'option');
+        $fellowship_thumbnail   = get_field('fellowship_thumbnail', 'option');
+    ?>
+    <section class="fellowship">
+        <div class="container">
+            <div class="fellowship-content d-flex space-between">
+                <div class="fellowship-content-title">
+                    <h2 class="section-title"><?php echo $fellowship_title; ?></h2>
+                    <p class="fellowship-content-description"><?php echo $fellowship_description; ?></p>
+                    <a href="<?php echo $fellowship_button['url']; ?>" class="btn btn-has-icon d-i-flex item-center" target="<?php echo $fellowship_button['target']; ?>"><?php echo $fellowship_button['title']; ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/Right-Arrow-Primary.svg' ?>" alt="Right Arrow Primary"></a>
+                </div>
+                <div class="fellowship-content-subtitle d-flex space-between">
+                    <div class="fellowship-content-subtitle-text">
+                        <h3 class="fellowship-content-subtitle-title"><?php echo $fellowship_subtitle; ?></h3>
+                        <p class="fellowship-content-subtitle-name"><?php echo $fellowship_name; ?></p>
+                    </div>
+                    <div class="fellowship-content-subtitle-image">
+                        <img src="<?php echo $fellowship_thumbnail['url']; ?>" alt="<?php echo $fellowship_thumbnail['title']; ?>">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
