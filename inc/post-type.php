@@ -60,4 +60,33 @@ function custom_post_type() {
         'menu_icon'          => 'dashicons-groups',
 		'supports'           => ['title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments']
     ]);
+    // Portfolio
+	register_post_type('portfolio', [
+        'labels'             => [
+            'name'                  => _x('Portfolio', 'browngoldsteinlevy'),
+            'singular_name'         => _x('Portfolio', 'browngoldsteinlevy'),
+            'menu_name'             => _x('Portfolio', 'browngoldsteinlevy'),
+            'name_admin_bar'        => _x('Portfolio', 'browngoldsteinlevy'),
+            'add_new'               => __('Add New', 'browngoldsteinlevy'),
+            'add_new_item'          => __('Add New', 'browngoldsteinlevy'),
+            'new_item'              => __('New Portfolio', 'browngoldsteinlevy'),
+            'edit_item'             => __('Edit Portfolio', 'browngoldsteinlevy'),
+            'view_item'             => __('View Portfolio', 'browngoldsteinlevy'),
+            'view_items'            => __('View Portfolio', 'browngoldsteinlevy'),
+            'all_items'             => __('All Portfolio', 'browngoldsteinlevy'),
+        ],
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+        'show_in_rest'       => true,
+		'query_var'          => true,
+		'rewrite'            => ['slug' => 'portfolio'],
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+        'menu_icon'          => 'dashicons-align-left',
+		'supports'           => ['title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments']
+    ]);
 }
