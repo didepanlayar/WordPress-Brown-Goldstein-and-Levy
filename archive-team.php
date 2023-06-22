@@ -57,13 +57,13 @@
         <div class="container">
             <div class="fellowship-content d-flex space-between">
                 <div class="fellowship-content-title">
-                    <h2 class="section-title"><?php echo $fellowship_title; ?></h2>
+                    <h2 class="fellowship-content-title-text"><?php echo $fellowship_title; ?></h2>
                     <p class="fellowship-content-description"><?php echo $fellowship_description; ?></p>
-                    <a href="<?php echo $fellowship_button['url']; ?>" class="btn btn-has-icon d-i-flex item-center" target="<?php echo $fellowship_button['target']; ?>"><?php echo $fellowship_button['title']; ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/Right-Arrow-Primary.svg' ?>" alt="Right Arrow Primary"></a>
+                    <a href="<?php echo $fellowship_button['url']; ?>" class="fellowship-btn btn-text btn-has-icon d-i-flex item-center" target="<?php echo $fellowship_button['target']; ?>"><?php echo $fellowship_button['title']; ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/Right-Arrow-Primary.svg' ?>" alt="Right Arrow Primary"></a>
                 </div>
-                <div class="fellowship-content-subtitle d-flex space-between">
+                <div class="fellowship-content-subtitle d-flex space-between item-center text-center">
                     <div class="fellowship-content-subtitle-text">
-                        <h3 class="fellowship-content-subtitle-title"><?php echo $fellowship_subtitle; ?></h3>
+                        <h3 class="fellowship-content-subtitle-title d-flex dir-column item-center section-title-sep"><?php echo $fellowship_subtitle; ?><span></span></h3>
                         <p class="fellowship-content-subtitle-name"><?php echo $fellowship_name; ?></p>
                     </div>
                     <div class="fellowship-content-subtitle-image">
