@@ -2,13 +2,13 @@
 <main class="main-content">
     <!-- Hero -->
     <?php
-        $hero_background = get_field('hero_background', 'option');
-        $hero_title = get_field('hero_title', 'option');
+        $team_background = get_field('team_background', 'option');
+        $team_title = get_field('team_title', 'option');
     ?>
-    <section class="hero" style="background-image: url(<?php echo $hero_background['url']; ?>)">
+    <section class="hero" style="background-image: url(<?php echo $team_background['url']; ?>)">
         <div class="container">
             <div class="hero__content">
-                <h1 class="hero-title text-center"><?php echo $hero_title; ?></h1>
+                <h1 class="hero-title text-center"><?php echo $team_title; ?></h1>
             </div>
         </div>
     </section>
