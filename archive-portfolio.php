@@ -37,7 +37,11 @@
                                         <div class="portfolio-item__text_content">
                                             <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                                             <div class="portfolio-item__text_text">
-                                                <?php the_excerpt(); ?>
+                                                <?php
+                                                    $content = get_the_content();
+                                                    $trim_content = wp_trim_words($content, 30);
+                                                    echo $trim_content;
+                                                ?>
                                             </div>
                                             <a href="<?php the_permalink(); ?>" class="portfolio-btn btn-text btn-has-icon d-i-flex item-center">Read More <img src="<?php echo get_template_directory_uri() . '/assets/images/Right-Arrow-Primary.svg' ?>" alt="Right Arrow Primary"></a>
                                         </div>
