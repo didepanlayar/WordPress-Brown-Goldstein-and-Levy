@@ -24,7 +24,6 @@
                     <?php
                         $portfolio_query = new WP_Query([
                             'post_type'     => 'portfolio',
-                            'posts_per_page' => -1,
                             'order'         => 'ASC',
                             'order'         => 'date'
                         ]);
@@ -39,7 +38,7 @@
                                             <div class="portfolio-item__text_text">
                                                 <?php
                                                     $content = get_the_content();
-                                                    $trim_content = wp_trim_words($content, 30);
+                                                    $trim_content = wp_trim_words($content, 20);
                                                     echo $trim_content;
                                                 ?>
                                             </div>
@@ -54,6 +53,9 @@
                             }
                         }
                     ?>
+                </div>
+                <div class="the-pagination text-center">
+                    <?php echo paginate_links(); ?>
                 </div>
             </div>
         </div>
