@@ -16,17 +16,11 @@
     <!-- News -->
     <section class="news">
         <div class="container">
-            <div class="news__content d-flex justify-center">
+            <div class="news__content d-flex justify-center flex-wrap">
                 <?php
-                    $news_query = new WP_Query([
-                        'post_type'      => 'news',
-                        'posts_per_page' => 6,
-                        'order'          => 'DEC',
-                        'order'          => 'date'
-                    ]);
-                    if($news_query->have_posts()) {
-                        while($news_query->have_posts()) {
-                            $news_query->the_post();
+                    if(have_posts()) {
+                        while(have_posts()) {
+                            the_post();
                 ?>
                             <div class="news-entry">
                                 <div class="news-entry__thumbnail">
@@ -44,8 +38,10 @@
                 <?php
                         }
                     }
-                    wp_reset_postdata();
                 ?>
+            </div>
+            <div class="the-pagination text-center">
+                <?php echo paginate_links(); ?>
             </div>
         </div>
     </section>
