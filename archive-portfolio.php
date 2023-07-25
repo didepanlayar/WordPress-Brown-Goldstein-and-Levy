@@ -22,14 +22,9 @@
                 </div>
                 <div class="portfolio__content_entries d-flex justify-center flex-wrap">
                     <?php
-                        $portfolio_query = new WP_Query([
-                            'post_type'     => 'portfolio',
-                            'order'         => 'ASC',
-                            'order'         => 'date'
-                        ]);
-                        if($portfolio_query->have_posts()) {
-                            while($portfolio_query->have_posts()) {
-                                $portfolio_query->the_post();
+                        if(have_posts()) {
+                            while(have_posts()) {
+                                the_post();
                     ?>
                                 <div class="portfolio-item__container d-flex item-center">
                                     <div class="portfolio-item__text d-flex justify-center text-center">

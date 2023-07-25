@@ -12,3 +12,4 @@ add_action( 'wp_enqueue_scripts', 'get_enqueue' );
 add_action( 'after_setup_theme', 'start_setup' );
 add_action( 'init', 'custom_post_type' );
 add_action( 'pre_get_posts', 'news_pagination' );
+add_action( 'pre_get_posts', 'portfolio_pagination' );
